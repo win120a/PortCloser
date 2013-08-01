@@ -1,4 +1,4 @@
 Windows Registry Editor Version 5.00
 This Registry file can run PortCloser when user logged.
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Run]
-"AC PortCloser"="C:\\run_engine\\bin\\javaw.exe" per.andy.portcloser.Run
+"AC PortCloser"="C:\\PC\\run_engine\\bin\\javaw.exe" per.andy.portcloser.Run
