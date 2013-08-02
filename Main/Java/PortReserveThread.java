@@ -11,6 +11,7 @@ public class PortReserveThread implements Runnable{
   }
   
   public void run(){
+    :Accept
     while(true){
       Socket s;
       try{
@@ -27,5 +28,8 @@ public class PortReserveThread implements Runnable{
         continue;
       }
     }
+  }
+  public void stopSelf(){
+    break Accept;
   }
 }
