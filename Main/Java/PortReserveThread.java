@@ -30,6 +30,7 @@ public class PortReserveThread implements Runnable{
     }
   }
   public void stopSelf(){
+    Thread.getThis
     break Accept;
   }
 }
