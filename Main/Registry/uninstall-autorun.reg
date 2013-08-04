@@ -1,4 +1,4 @@
 Windows Registry Editor Version 5.00
 This Registry file will cancel autorun.
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Run]
-"AC PortCloser"="C:\\PC\\run_engine\\bin\\javaw.exe" per.andy.portcloser.Run
+"AC PortCloser"=-
