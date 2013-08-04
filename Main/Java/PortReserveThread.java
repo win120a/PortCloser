@@ -24,6 +24,7 @@ public class PortReserveThread implements Runnable{
         s.close();
       }
       finally{
+        s.close(); //Finally close socket.
         s = null;
         continue;
       }
