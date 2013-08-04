@@ -34,4 +34,7 @@ public class PortReserveThread implements Runnable{
     break Accept;
     Thread.currentThread().interrupt();
   }
+  public int getPort(){
+    return port;
+  }
 }
