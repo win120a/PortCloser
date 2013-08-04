@@ -18,7 +18,7 @@ public class Run{
      Runtime rt = Runtime.getRuntime();
      rt.exec("notepad.exe " + t.getAbsolutePath());
      System.exit(1);
-     }
+    }
     else{
       // Read Settings code & Start Thread.
     }
