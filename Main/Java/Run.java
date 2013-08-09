@@ -21,6 +21,7 @@ public class Run{
     }
     else{
       // Read Settings code & Start Thread.
+      // PortReserveThread prt = new PortReserveThread(...); //... Means port.
     }
   }
 }
