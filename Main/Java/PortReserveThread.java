@@ -1,21 +1,23 @@
+// The Java Package import.
 import java.net.*;
 import java.io.*;
 
+// The public class, PortReserveThread.
 public class PortReserveThread implements Runnable{
-  int port;
-  ServerSocket ss;
+  int port; // This thread's port.
+  ServerSocket ss; // The ServerSocket.
   
   public PortReserveThread(int which){
-    port = which;
-    ss = new ServerSocket(port);
+    port = which; // Set port.
+    ss = new ServerSocket(port);  //Get New SS (ServerSocket) instance.
   }
   
-  public void run(){
-    Accept:
-    while(true){
+  public void run(){ // Thread method body.
+    Accept:  // Set a tag, to interrupt this.
+    while(true){ // Unlimited Accept.
       Socket s;
       try{
-        s = ss.accept();
+        s = ss.accept(); // Core at here! Reserve the port.
       }
       catch(IOException){
         s.close();
@@ -30,7 +32,7 @@ public class PortReserveThread implements Runnable{
       }
     }
   }
-  public void stopSelf(){
+  public void stopSelf(){  //Stop Procress.
     break Accept;
     Thread.currentThread().interrupt();
   }
