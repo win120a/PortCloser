@@ -1,5 +1,5 @@
 public class ThreadStorage{
-
+  private ThreadStorage cache;
   private ThreadStorage(){}
 
   private int nowAt = 0;
@@ -13,4 +13,9 @@ public class ThreadStorage{
     return storage[index];
   }
 
-  
+  public PortReserveThread[] getStorage(){
+    return storage;
+  }
+
+  public ThreadStorage getInstance(){
+     r
