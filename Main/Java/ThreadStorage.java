@@ -18,4 +18,18 @@ public class ThreadStorage{
   }
 
   public ThreadStorage getInstance(){
-     r
+     if(cache == null){
+       cache = new ThreadStorage();
+       return cache;
+     }
+     else{
+       return cache;
+     }
+   }
+
+   public void putThread(Object what){
+     if(what instanceof Thread){
+       storage[getPos() + 1] = what;
+     }
+   }
+}
