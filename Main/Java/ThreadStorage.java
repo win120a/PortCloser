@@ -17,7 +17,7 @@ public class ThreadStorage{
     return storage;
   }
 
-  public ThreadStorage getInstance(){
+  public static ThreadStorage getInstance(){
      if(cache == null){
        cache = new ThreadStorage();
        return cache;
