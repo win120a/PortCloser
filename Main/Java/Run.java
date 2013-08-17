@@ -21,6 +21,7 @@ public class Run{
     }
     else{
       // Read Settings code & Start Thread.
+      // Use ini file (xxxMap) | Serial (ObjectOutputStream)
       // PortReserveThread prt = new PortReserveThread(...); //... Means port.
     }
   }
