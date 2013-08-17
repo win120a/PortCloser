@@ -27,9 +27,17 @@ public class ThreadStorage{
      }
    }
 
-   public void putThread(Object what){
-     if(what instanceof Thread){
-       storage[getPos() + 1] = what;
-     }
+   public void putThread(Thread what){
+     storage[getPos() + 1] = what;
+     nowAt++;
+   }
+
+   private Thread getLastThread(){
+     return storage[getPos()]
+   }
+
+   public void putAndStart(Thread what){
+     putThread(what);
+     getLastThread().start();  //Thread Sync Ques. (Add Sync.)
    }
 }
