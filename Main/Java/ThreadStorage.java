@@ -1,5 +1,5 @@
 public class ThreadStorage{
-  private ThreadStorage cache;
+  private static ThreadStorage cache;
   private ThreadStorage(){}
 
   private int nowAt = 0;
