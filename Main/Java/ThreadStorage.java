@@ -27,7 +27,7 @@ public class ThreadStorage{
      }
    }
 
-   public void putThread(Thread what){
+   public synchronized void putThread(Thread what){
      storage[getPos() + 1] = what;
      nowAt++;
    }
@@ -36,7 +36,7 @@ public class ThreadStorage{
      return storage[getPos()]
    }
 
-   public void putAndStart(Thread what){
+   public synchronized void putAndStart(Thread what){
      putThread(what);
      getLastThread().start();  //Thread Sync Ques. (Add Sync.)
    }
