@@ -32,8 +32,8 @@ public class ThreadStorage{
      nowAt++;
    }
 
-   private Thread getLastThread(){
-     return storage[getPos()]
+   private synchronized Thread getLastThread(){
+     return storage[getPos()];
    }
 
    public synchronized void putAndStart(Thread what){
