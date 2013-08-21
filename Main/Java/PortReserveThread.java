@@ -4,7 +4,7 @@ import java.io.*;
 
 //The public class, PortReserveThread.
 public class PortReserveThread implements Runnable{
-      Socket s;
+          Socket s;
 	  int port; // This thread's port.
 	  ServerSocket ss; // The ServerSocket.
 	  
