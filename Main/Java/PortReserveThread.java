@@ -1,5 +1,4 @@
 
-
 //The Java Package import.
 import java.net.*;
 import java.io.*;
@@ -32,7 +31,7 @@ public class PortReserveThread implements Runnable{
 		  System.out.println("Error,Will exit.");
 		  System.exit(1);
 		}
-      }
+          }
 	  catch(IOException ioe){
 		try {
 		  s.close();
