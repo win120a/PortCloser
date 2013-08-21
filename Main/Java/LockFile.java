@@ -8,31 +8,31 @@ public class LockFile{
 
   public LockFile(File f){
     try {
-	  	 fos = new FileOutputStream(f);
-	  } catch (FileNotFoundException e) {
-	     System.out.println("Error,Will exit.");
-	     System.exit(1);
-	  }
+      fos = new FileOutputStream(f);
+    } catch (FileNotFoundException e) {
+      System.out.println("Error,Will exit.");
+      System.exit(1);
+    }
     ch = fos.getChannel();
   }
 
   public FileLock start(){
     try {
-		  lock = ch.lock();
-	  } catch (IOException e) {
+      lock = ch.lock();
+    } catch (IOException e) {
       System.out.println("Error,Will exit.");
-	    System.exit(1);
-	  }
+      System.exit(1);
+    }
     return lock;
   }
 
   public void end(){
     try {
-		  lock.release();
-	  } catch (IOException e) {
+      lock.release();
+    } catch (IOException e) {
       System.out.println("Error,Will exit.");
       System.exit(1);
-	  }
+    }
   }
 
   public class DataPackage{
