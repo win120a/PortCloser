@@ -35,15 +35,15 @@ public class LockFile{
     }
   }
 
-  public class DataPackage{
+  public final class DataPackage{
     FileChannel channel;
     FileLock lock;
     protected DataPackage(FileChannel fc,FileLock lck){
       fc = channel;
       lock = lck;
     }
-    protected FileChannel getChannel(){return channel;}
-    protected FileLock getLock(){return lock;}
+    public FileChannel getChannel(){return channel;}
+    public FileLock getLock(){return lock;}
   }
 
   public LockFile.DataPackage getLockAndChannel(){
