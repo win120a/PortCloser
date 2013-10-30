@@ -32,6 +32,7 @@ public class PortReserveThread implements Runnable{
       	dp = new DatagramPacket(dpbyte,9); //Create Packet Object.
         s = ss.accept(); // Reserve TCP.
         ds.receive(dp); // Reserve UDP.
+        s.close();
       }
       catch(SocketTimeoutException ste){
         try {
