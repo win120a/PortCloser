@@ -1,4 +1,5 @@
 // May be it can use Collection instead this.
+// Use Map<int,PortReserveThread>
 public class ThreadObjectStorage{
   private static ThreadObjectStorage cache;
   private ThreadObjectStorage(){}
@@ -7,14 +8,17 @@ public class ThreadObjectStorage{
   private PortReserveThread[] storage;
 
   public int getPos(){
+    //Collection: returns Map length
     return nowAt;
   }
 
   public PortReserveThread getThread(int index){
+    //Collection: collectionobj.get(index);
     return storage[index];
   }
 
   public PortReserveThread[] getStorage(){
+    //Return Map
     return storage;
   }
 
