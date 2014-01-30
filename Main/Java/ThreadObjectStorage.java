@@ -1,3 +1,4 @@
+// May be it can use Collection instead this.
 public class ThreadObjectStorage{
   private static ThreadObjectStorage cache;
   private ThreadObjectStorage(){}
